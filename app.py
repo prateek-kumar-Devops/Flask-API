@@ -12,3 +12,15 @@ def api_data():
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
 
+
+@app.route('/submittodoitem', methods=['POST'])
+def submit_todo():
+    item_name = request.form['itemName']
+    item_desc = request.form['itemDescription']
+
+    mongo.db.todos.insert_one({
+        "itemName": item_name,
+        "itemDescription": item_desc
+    })
+    return jsonify({"message": "Item added"})
+
