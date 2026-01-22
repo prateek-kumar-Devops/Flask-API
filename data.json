@@ -11,3 +11,7 @@
   }
 ]
 
+{
+  "status": "success",
+  "message": "Updated API response"
+}
