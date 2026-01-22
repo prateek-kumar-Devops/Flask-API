@@ -1,0 +1,2 @@
+This is a sample text file.
+File handling in Python is easy.
